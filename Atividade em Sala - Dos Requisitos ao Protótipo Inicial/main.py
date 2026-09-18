@@ -1,4 +1,5 @@
 from requisitos_usuario import consultar_notas
+from requisitos_sistema import verificar_autenticacao
 
 
 # PLANO
@@ -17,6 +18,16 @@ from requisitos_usuario import consultar_notas
 
 
 def main():
+    usuario_autenticado = {
+        "id": 1,
+        "nome": "Gabriel",
+        "autenticado": True,
+    }
+    usuario_nao_autenticado = {
+        "id": 2,
+        "nome": "Visitante",
+        "autenticado": False,
+    }
     notas = {
         "Engenharia de Software": 8.5,
         "Compiladores": 9.0,
@@ -24,6 +35,16 @@ def main():
 
     print("R1 - Consulta das próprias notas:")
     print(consultar_notas(notas))
+
+    print("\nR2 - Verificação de usuário autenticado:")
+    verificar_autenticacao(usuario_autenticado)
+    print("Consulta autorizada para Gabriel.")
+
+    print("\nR2 - Tentativa de usuário não autenticado:")
+    try:
+        verificar_autenticacao(usuario_nao_autenticado)
+    except PermissionError as erro:
+        print(f"Consulta bloqueada: {erro}")
 
 
 if __name__ == "__main__":
