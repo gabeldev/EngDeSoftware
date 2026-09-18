@@ -1,0 +1,8 @@
+R1 - Requisito de usuário
+O aluno deve poder consultar suas notas.
+
+R2 - Requisito de sistema
+O sistema deve permitir a consulta de notas apenas para usuários autenticados.
+
+R3 - Requisito ético
+O sistema não deve permitir que um aluno visualize as notas de outro aluno.

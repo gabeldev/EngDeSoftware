@@ -71,3 +71,14 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# AUTOAVALIAÇÃO
+# Critérios atingidos: os critérios 1 a 6 foram atendidos.
+# Critérios não atingidos: nenhum.
+# O requisito mais difícil foi o R3, pois a consulta precisava distinguir o
+# próprio aluno de outro aluno. A solução foi comparar os identificadores antes
+# de liberar o acesso às notas.
+# A IA ajudou a organizar os módulos, implementar as validações e revisar os
+# cenários. A sugestão inicial da IA precisou ser ajustada para representar os
+# requisitos escolhidos como comportamentos verificáveis no terminal.
