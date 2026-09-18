@@ -1,5 +1,6 @@
 from requisitos_usuario import consultar_notas
 from requisitos_sistema import verificar_autenticacao
+from requisitos_eticos import verificar_acesso
 
 
 # PLANO
@@ -17,8 +18,14 @@ from requisitos_sistema import verificar_autenticacao
 # cenários usados para comprovar cada requisito.
 
 
+def executar_consulta(usuario, aluno):
+    verificar_autenticacao(usuario)
+    verificar_acesso(usuario, aluno)
+    return consultar_notas(aluno["notas"])
+
+
 def main():
-    usuario_autenticado = {
+    usuario_gabriel = {
         "id": 1,
         "nome": "Gabriel",
         "autenticado": True,
@@ -28,21 +35,36 @@ def main():
         "nome": "Visitante",
         "autenticado": False,
     }
-    notas = {
-        "Engenharia de Software": 8.5,
-        "Compiladores": 9.0,
+    aluno_gabriel = {
+        "id": 1,
+        "nome": "Gabriel",
+        "notas": {
+            "Engenharia de Software": 8.5,
+            "Compiladores": 9.0,
+        },
+    }
+    aluno_ana = {
+        "id": 2,
+        "nome": "Ana",
+        "notas": {
+            "Engenharia de Software": 9.5,
+            "Compiladores": 8.0,
+        },
     }
 
-    print("R1 - Consulta das próprias notas:")
-    print(consultar_notas(notas))
+    print("Cenário 1 - R1: aluno autenticado consulta as próprias notas")
+    print(executar_consulta(usuario_gabriel, aluno_gabriel))
+    print("Resultado: consulta autorizada pelos requisitos R2 e R3.")
 
-    print("\nR2 - Verificação de usuário autenticado:")
-    verificar_autenticacao(usuario_autenticado)
-    print("Consulta autorizada para Gabriel.")
-
-    print("\nR2 - Tentativa de usuário não autenticado:")
+    print("\nCenário 2 - R2: usuário não autenticado tenta consultar notas")
     try:
-        verificar_autenticacao(usuario_nao_autenticado)
+        executar_consulta(usuario_nao_autenticado, aluno_gabriel)
+    except PermissionError as erro:
+        print(f"Consulta bloqueada: {erro}")
+
+    print("\nCenário 3 - R3: aluno tenta consultar as notas de outro aluno")
+    try:
+        executar_consulta(usuario_gabriel, aluno_ana)
     except PermissionError as erro:
         print(f"Consulta bloqueada: {erro}")
 
