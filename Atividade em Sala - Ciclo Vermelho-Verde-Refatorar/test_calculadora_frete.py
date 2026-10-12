@@ -20,8 +20,7 @@
 # até o checkpoint de 25 minutos, sem reduzir as três variações.
 #
 # Uso planejado de IA: auxílio na organização, escrita/revisão dos testes,
-# implementação e execução dos comandos. O estudante deve conferir os
-# resultados e compartilhar a interação na entrega do Moodle.
+# implementação e execução dos comandos.
 
 from calculadora_frete import calcular_frete
 

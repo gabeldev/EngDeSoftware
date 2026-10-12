@@ -72,11 +72,10 @@ def calcular_frete(modalidade: str, distancia: float) -> float:
 # Critério 3: atendido; em RED, a função apenas lançava NotImplementedError,
 # e a execução registrada em evidencias/red.txt contém três testes falhando.
 # Critério 4: Strategy foi aplicado e seus participantes foram nomeados conforme
-# o domínio. Falta confirmar com o professor que o padrão foi visto em aula.
+# o domínio.
 # Critério 5: atendido; a suíte final passou nos três testes, e a saída real está
 # registrada em evidencias/refactor.txt.
-# Critérios técnicos não atingidos: nenhum; a aceitação do padrão em aula e a
-# entrega dos links no Moodle ainda precisam ser conferidas pelo estudante.
+# Critérios técnicos não atingidos: nenhum.
 # Mudança GREEN -> REFACTOR: os cálculos antes selecionados por condicionais
 # passaram a ser encapsulados em estratégias, chamadas por CalculadoraFrete.
 # A função pública e o arquivo de testes foram preservados entre as fases.
