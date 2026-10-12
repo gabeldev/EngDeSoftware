@@ -1,0 +1,5 @@
+/materiais_estudo/
+*.pdf
+__pycache__/
+.pytest_cache/
+.venv/

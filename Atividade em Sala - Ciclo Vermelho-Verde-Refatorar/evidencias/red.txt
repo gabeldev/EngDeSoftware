@@ -1,0 +1,64 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+____________________________ test_retirada_gratuita ____________________________
+
+    def test_retirada_gratuita():
+>       assert calcular_frete("retirada", 10) == 0
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_calculadora_frete.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+modalidade = 'retirada', distancia = 10
+
+    def calcular_frete(modalidade: str, distancia: float) -> float:
+        """Contrato público, ainda sem implementação."""
+>       raise NotImplementedError(
+            "Cálculo de frete ainda não implementado (RED)"
+        )
+E       NotImplementedError: Cálculo de frete ainda não implementado (RED)
+
+calculadora_frete.py:6: NotImplementedError
+____________________________ test_entrega_economica ____________________________
+
+    def test_entrega_economica():
+>       assert calcular_frete("economica", 10) == 20
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_calculadora_frete.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+modalidade = 'economica', distancia = 10
+
+    def calcular_frete(modalidade: str, distancia: float) -> float:
+        """Contrato público, ainda sem implementação."""
+>       raise NotImplementedError(
+            "Cálculo de frete ainda não implementado (RED)"
+        )
+E       NotImplementedError: Cálculo de frete ainda não implementado (RED)
+
+calculadora_frete.py:6: NotImplementedError
+____________________________ test_entrega_expressa _____________________________
+
+    def test_entrega_expressa():
+>       assert calcular_frete("expressa", 10) == 40
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+test_calculadora_frete.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+modalidade = 'expressa', distancia = 10
+
+    def calcular_frete(modalidade: str, distancia: float) -> float:
+        """Contrato público, ainda sem implementação."""
+>       raise NotImplementedError(
+            "Cálculo de frete ainda não implementado (RED)"
+        )
+E       NotImplementedError: Cálculo de frete ainda não implementado (RED)
+
+calculadora_frete.py:6: NotImplementedError
+=========================== short test summary info ============================
+FAILED test_calculadora_frete.py::test_retirada_gratuita - NotImplementedErro...
+FAILED test_calculadora_frete.py::test_entrega_economica - NotImplementedErro...
+FAILED test_calculadora_frete.py::test_entrega_expressa - NotImplementedError...
+3 failed in 0.01s
