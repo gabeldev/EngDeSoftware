@@ -35,7 +35,7 @@ Para conferir os commits, execute `git log --oneline --reverse -- .` nesta pasta
 
 ## Entrega
 
-O plano está no topo dos testes. A autoavaliação será registrada ao final do código de produção na fase refactor.
+O plano está no topo dos testes, e a autoavaliação está no final do código de produção.
 Houve uso de IA para organização, implementação, revisão dos testes e execução dos comandos.
 Confirme que Strategy foi visto em aula e envie no Moodle o link público desta pasta e o link compartilhável da interação com IA.
 Os PDFs são materiais locais de estudo e estão excluídos do Git e da pasta de entrega.
